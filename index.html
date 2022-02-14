@@ -22,6 +22,14 @@ height:393px;
 </center>
 
 
-<iframe src="https://panzerwar3.github.io/catworld/Main_Theme.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+<iframe src="https://panzerwar3.github.io/catworld/Main_Theme.mp3" allow="autoplay" style="display:block" id="iframeAudio">
 </iframe> 
+<audio id="audiotag1" src="https://panzerwar3.github.io/catworld/Main_Theme.mp3" preload="auto"></audio>
+
+<script type="text/javascript">
+	function play_single_sound() {
+		document.getElementById('audiotag1').play();
+	}
+	setTimeout(()=>play_single_sound();,1000);
+</script>
 </body>
