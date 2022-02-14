@@ -19,9 +19,11 @@ height:393px;
 <a href = "join.html"><button>Присоединиться</button></a>
 </div>
 </center>
+
 <script>
 function play(){
-let audio = new Audio('https://panzerwar3.github.io/catworld/Main_Theme.mp3');
+let audio = new Audio();
+audio.src = 'https://panzerwar3.github.io/catworld/Main_Theme.mp3';
 audio.play();
 }
 play();
