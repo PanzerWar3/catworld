@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>
+Создать имя
+</title>
+<meta charset='utf-8'/>
+<style>
+body{
+background:#303030;
+
+}
+#name{
+color:white;
+border:1px solid gray;
+border-radius:7px;
+
+}
+#name::placeholder{
+color:white;
+}
+</style>
+<script src ="index.js">
+
+</script>
+</head>
+<body>
+<center>
+<div class ="form">
+<input type = "text" placeholder="Введите свое имя" id="name"><button id ="submit"></button>
+</div>
+</center>
+<script>
+document.getElementById("submit").onclick=function(){
+var name = document.getElementById("name").value;
+var money = 0;
+var skin = [];
+firebase.database().ref(localStorage.getItem("username")).on("child_added", function (snapshot) {
+var check_name = snapshot.val().name;
+if(check_name !== name){
+
+firebase.database().ref("users").push().set({
+"name":name,
+"money":money,
+"skins":skin
+});
+}
+});
+};
+</script>
+</body>

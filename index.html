@@ -7,8 +7,7 @@
 <style>
 body{
 background:#303030;
-width:600px;
-height:393px;
+
 }
 button{
 width:200px;
@@ -23,6 +22,9 @@ margin:100px;
 }
 #title{
 margin:-100px;
+}
+button:hover{
+color:white;
 }
 </style>
 </head>
@@ -55,7 +57,7 @@ margin:-100px;
 </script>
 <script>
 if(localStorage.getItem("name") == null || localStorage.getItem("name")==""){
-
+document.location.href="auth.html";
 }
 </script>
 </body>
