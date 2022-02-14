@@ -38,7 +38,7 @@ document.getElementById("submit").onclick=function(){
 var name = document.getElementById("name").value;
 var money = 0;
 var skin = [];
-firebase.database().ref(localStorage.getItem("username")).on("child_added", function (snapshot) {
+firebase.database().ref("users").on("child_added", function (snapshot) {
 var check_name = snapshot.val().name;
 if(check_name !== name){
 
