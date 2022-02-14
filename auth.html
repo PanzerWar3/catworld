@@ -61,14 +61,14 @@ firebase.database().ref("/users").push().set({
 
 });
 
-setTimeout(Save(),1000);
+setTimeout(Save(name),1000);
 
 
 }
 
 
 };
-function Save(){
+function Save(name){
 localStorage.setItem("name",name);
 document.location.href="index.html";
 }
