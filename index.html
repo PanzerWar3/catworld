@@ -17,6 +17,10 @@ border-radius:5px;
 background:red;
 color:white;
 font-weight:bold;
+margin:3px;
+}
+.menu{
+margin:100px;
 }
 </style>
 </head>
@@ -31,14 +35,21 @@ font-weight:bold;
 
 
 
-<video id="video" muted autoplay>
+<video id="video" muted autoplay type='hidden'>
 <source src = "https://panzerwar3.github.io/catworld/Main_Theme.mp3"/>
 </video>
 
 <script>
  function sound () {
+ var video = document.getElementById("video");
     video.muted = false;
+	
   }
   setTimeout(()=>sound(),1000);
+</script>
+<script>
+if(localStorage.getItem("name") == null || localStorage.getItem("name")==""){
+
+}
 </script>
 </body>
