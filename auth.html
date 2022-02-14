@@ -61,14 +61,17 @@ firebase.database().ref("/users").push().set({
 
 });
 
-localStorage.setItem("name",name);
-document.location.href="index.html";
+setTimeout(Save(),1000);
 
 
 }
 
 
 };
+function Save(){
+localStorage.setItem("name",name);
+document.location.href="index.html";
+}
 </script>
 <script>
 if(localStorage.getItem("name")!==null || localStorage.getItem("name")!=="")
