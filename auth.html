@@ -47,7 +47,7 @@ var money = 0;
 var skin = [1];
 if(name!==""){
 
-    firebase.database().ref(room).on("child_added", function (snapshot) {
+    firebase.database().ref("/users").on("child_added", function (snapshot) {
 	var check_name = snapshot.val().name;
 	if(name!==check_name){
 	
