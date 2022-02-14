@@ -54,15 +54,20 @@ if(name!==""){
 firebase.database().ref("/users").push().set({
 "name":name,
 "money":money,
-"skins":skin[0]
+"skin1":false,
+"skin2":false,
+"skin3":false,
+"skin4":false,
+"skin5":false
 });
-name="";
+
 }
 else{
 document.querySelector(".form").innerHTML+="<br><font color='red'>Такое имя уже существует</font>";
 }
 
 });
+document.getElementById("name").value="":
 }
 };
 </script>
