@@ -68,15 +68,18 @@ setTimeout(Save(name),3000);
 
 
 };
-function Save(name){
-localStorage.setItem("name",name);
-document.location.href="index.html";
-}
+
 </script>
 <script>
 if(localStorage.getItem("name")!=="")
 {
 console.log("no name");
+}
+</script>
+<script>
+function Save(name){
+localStorage.setItem("name",name);
+document.location.href="index.html";
 }
 </script>
 </body>
