@@ -46,7 +46,7 @@ var name = document.getElementById("name").value;
 var money = 0;
 var skin = [];
 
-firebase.database().ref("users").push().set({
+firebase.database().ref("/users").push().set({
 "name":name,
 "money":money,
 "skins":skin
