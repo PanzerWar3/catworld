@@ -10,13 +10,20 @@ background:#303030;
 
 }
 #name{
+width:200px;
 color:white;
 border:1px solid gray;
 border-radius:7px;
+background:black;
 
 }
 #name::placeholder{
 color:white;
+}
+#submit{
+color:white;
+background:black;
+border-radius:8px;
 }
 </style>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
@@ -38,17 +45,14 @@ document.getElementById("submit").onclick=function(){
 var name = document.getElementById("name").value;
 var money = 0;
 var skin = [];
-firebase.database().ref("users").on("child_added", function (snapshot) {
-var check_name = snapshot.val().name;
-if(check_name !== name){
 
 firebase.database().ref("users").push().set({
 "name":name,
 "money":money,
 "skins":skin
 });
-}
-});
+
+
 };
 </script>
 </body>
