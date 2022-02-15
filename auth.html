@@ -49,7 +49,7 @@ if(name!==""){
 
 	firebase.database().ref("/users").on("child_added",function(snapshot){
 	var check = snapshot.val().name;
-	if(check!==name){
+	if(check==name){
 firebase.database().ref("/users").push().set({
 "name":name,
 "money":money,
