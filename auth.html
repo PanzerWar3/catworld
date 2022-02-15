@@ -47,7 +47,9 @@ var money = 0;
 var skin = [1];
 if(name!==""){
 
-	
+	firebase.database().ref("/users").on("child_added",function(snapshot){
+	var check = snapshot.val().name;
+	if(check!==name){
 firebase.database().ref("/users").push().set({
 "name":name,
 "money":money,
@@ -62,7 +64,11 @@ firebase.database().ref("/users").push().set({
 });
 setTimeout(()=>localStorage.setItem("name",name),5500);
 setTimeout(()=>document.location.href="index.html",6000);
-
+}
+else{
+document.getElementById("form").innerHTML+="<br><font color='red'>Такое имя уже существует</font>";
+}
+});
 }
 
 
